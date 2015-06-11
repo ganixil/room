@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <style media="screen">
+    table, th, td {
+      border: 1px solid black;
+    }
+    </style>
+    <script type="text/javascript">
+      function  calculate(){
+        var pos=[0,0,0];
+        var times = document.getElementById('time').value;
+        for(var i = 0;i < times; i++) {
+          var r = Math.floor(Math.random() * 3);
+          pos[r]+=1;
+        };
+        document.getElementById('first').innerHTML = pos[0];
+        document.getElementById('second').innerHTML  = pos[1];
+        document.getElementById('third').innerHTML  = pos[2];
+      }
+
+    </script>
+  </head>
+  <body>
+    <p>
+      how many times you want to match:
+    </p>
+    <input type="text" id='time'/><br>
+    <button onclick="calculate();">Submit</button>
+    <table>
+      <tr>
+        <td>
+          Xiang and Xicheng
+        </td>
+        <td>
+          Xicheng and Liang
+        </td>
+        <td>
+          Liang and Xiang
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p id='first'>
+
+          </p>
+        </td>
+        <td>
+          <p id='second'>
+
+          </p>
+        </td>
+        <td>
+          <p id='third'>
+          </p>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+</html>
